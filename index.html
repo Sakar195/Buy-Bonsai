@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bonsai</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-----css specific to this page--->
+	<style>
+
+		.col-2 img{
+			padding: 0 100px;
+		}
+		.slider{
+			position: relative;
+		}
+		.slide{
+			display: none;
+		}
+		.previous, .next{
+			font-size: 30px;
+			position: absolute;
+			cursor: pointer;
+			color: black;
+			border-color: black;
+			top: 40%;
+		}
+		.next{
+			right: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<!-------nav bar------->
+	<div class="navbar">
+		<img src=" 	img/logo.png" width="170px">
+		<h1 class="logoname-top" >B</h1>
+		<div class="logoname-bottom">
+			<span>uy</span>
+			<span>onsai</span>
+		</div>
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Home</a></li>
+				<li><a href="html/products.html">Products</a></li>
+				<li><a href="html/research.html">Research</a></li>
+				<li><a href="html/blog.html">Blog</a></li>
+				<li><a href="html/account.html">Account</a></li>
+				<li><a href="html/aboutus.html">About Us</a></li>
+				
+			</ul>
+		</nav>	
+	</div> 
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<h1>We sell Bonsai</h1>
+					<p>Bonsai is the Japanese art of growing and training miniature trees in pots, developed from the traditional Chinese art form of penjing.</p>
+					<br>
+					<p>You want some, click the button below</p>
+					<a href="html/products.html" class="button">View Products</a>
+				</div>
+				<div class="col-2">
+					<div class="slider">
+						<div class="slide">
+							<img src="img/p1.jpg">
+						</div>
+						<div class="slide">
+							<img src="img/p2.jpg">
+						</div>
+						<div class="slide">
+							<img src="img/p3.jpg">
+						</div>
+						<div class="slide">
+							<img src="img/p4.jpg">
+						</div>
+						<div class="slide">
+							<img src="img/p5.jpg">
+						</div>
+						<span class="previous" onclick="show(-1)">❮</span>
+						<span  class="next" onclick="show(1)">❯</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---caring bonsai--->
+	<div class="categories">
+		<div class="small-container">
+			<h3>Caring a bonsai</h3>
+			<div class="row">
+				<div class="col-3">
+					<img src="img/environment.jpg">
+					<h3>Environment</h3>
+					<br>
+					<p>Bonsai trees are very sensitive towards the environment. The ideal temperature for bonsai ranges from 16&#8451 to 27&#8451. When kept in cold temperatures the life span decreases. It may also kill the tree. </p>
+				</div>
+				<div class="col-3">
+					<img src="img/soil.jpg">
+					<h3>Soil</h3>
+					<br>
+					<p>It is important to use the proper type of soil for bonsai. Some soils are too dense which prevents the root fron penetrating the soil where as some soils are too loose which doesnot hold the water.</p>
+				</div>
+				<div class="col-3">
+					<img src="img/water.jpg">
+					<h3>Water</h3>
+					<br>
+					<p>The moisture level of soil should  be checked before watering. The humidity of the environment should also be checked because if  it is very humid the trees donot require much  water.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!----- products---->
+	<div class="small-container">
+		<h2 class="tittle">Featured Products</h2>
+		<div class="row">
+			<div class="col-4">
+				<a href="html/p1.html">
+					<img src="img/p1.jpg">
+					<h4>Ficus</h4>
+					<p>$8.00</p>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="html/p3.html">
+					<img src="img/p3.jpg">
+					<h4>Japanese Maple</h4>
+					<p>$39.99</p>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="html/p4.html">
+					<img src="img/p4.jpg">
+					<h4>Fukien tea</h4>
+					<p>$14.99</p>
+				</a>
+			</div>
+			<div class="col-4">
+				<a href="html/p7.html">
+					<img src="img/p7.jpg">
+					<h4>Snow rose</h4>
+					<p>$150.00</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!----footer---->
+	<div class="footer">
+		<div class="footer-col">
+			<h4>Follow us on</h4>
+			<!----Adding social media links in footer---->
+				<ul>
+					<a href="https://www.facebook.com">
+						<li>Facebook</li>
+					</a>
+					<a href="https://www.instagram.com">
+						<li>Instagram</li>
+					</a>
+					<a href="https://www.twitter.com">
+						<li>Twitter</li>
+					</a>
+				</ul>
+		</div>
+		<p class="copyright">&copyCopy right 2022 - Team  4</p>
+	</div>
+	  <script>	
+	  	let z = 0;
+
+	  	function show(x){
+	  		z = z + x;
+	  		slideshow(z);
+	  	}
+	  	slideshow(z);
+
+	  	function slideshow(num){
+	  		let slides = document.getElementsByClassName('slide');
+
+	  		for(let y of slides){
+	  			y.style.display = "none";
+	  		}
+	  		if(num == slides.length){
+	  			z = 0;
+	  			num = 0;
+
+	  		}
+	  		if(num < 0){
+	  			z = slides.length -1;
+	  			num = slides.length -1;
+	  		}
+
+	  		slides[num].style.display = "block";
+	  	}
+
+	  </script>
+</body>
+</html>

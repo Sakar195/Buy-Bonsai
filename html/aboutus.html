@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<!-----css specific to this page--->	
+	<style type="text/css">
+
+		.row{
+			padding: 20px 50px;
+			flex-direction: row;
+			justify-content: unset;
+		}
+		.row .sociallogo img{
+			padding-right: 15px;
+			margin-top: 5px;
+			margin-bottom: 3px;
+
+		}
+		.img{
+			flex-basis: 20%;
+		}
+		.img img{
+			max-width: 100%;
+			clip-path: circle();
+			width: 200px;
+		}
+		a img{
+			height:30px;
+		}
+		.desc{
+			flex-basis: 80%;
+			padding: 10px 50px;
+		}
+		.details{
+			display: flex;
+			padding: 20px 0px;
+		}
+		.form{
+			padding: 0 100px;
+		}
+		.form button{
+			padding: 5px 5px;
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+		input{
+			border-radius: 4px;
+		}
+		textarea{
+			border-radius: 4px;
+		}
+		.sociallogo img:hover{
+		transform: translateY(-5px);
+		}
+		.sociallogo img{
+		transition: transform .5s;
+		}
+	</style>
+</head>
+<body>
+	<!-------nav bar------->
+	<div class="navbar">
+		<img src="../img/logo.png" width="170px">
+		<h1 class="logoname-top" >B</h1>
+		<div class="logoname-bottom">
+			<span>uy</span>
+			<span>onsai</span>
+		</div>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../html/products.html">Products</a></li>
+					<li><a href="../html/research.html">Research</a></li>
+					<li><a href="../html/blog.html">Blog</a></li>
+					<li><a href="../html/account.html">Account</a></li>
+					<li class="current"><a href="../html/aboutus.html">About Us</a></li>
+				</ul>
+			</nav>
+	</div>
+	<!-----content--->
+	<div class="row">
+		<div class="details">
+			<div class="img">
+			<img src="../img/srijan.jpg">
+			</div>
+			<div class="desc">
+				<h2>Srijan Maharjan</h2>
+				<div class="sociallogo">
+					<a href="https://www.facebook.com/srijan.mahrzn"><img src="../img/fb.png"></a>
+					<a href="https://www.instagram.com/srijanmahrzn"><img src="../img/insta.png" ></a>
+					<a href="https://github.com/MSrijan"><img src="../img/github.png" ></a>
+				</div>
+				<p>I'm Srijan Maharjan, one of the developers of this website. I hope you are having a good day. I wish to become successful in life although I don't know how to define one's success in life. Thank you for visiting our website.</p>
+			</div>
+		</div>
+		<div class="details">
+			<div class="desc">
+				<h2 >Sakar Paudel</h2>
+				<div class="sociallogo">
+					<a href="https://www.facebook.com/sakar.poudel.988"><img src="../img/fb.png" ></a>
+					<a href="https://www.instagram.com/sakar.paudel/"><img src="../img/insta.png" ></a>
+					<a href="https://github.com/Sakar195"><img src="../img/github.png"></a>
+				</div>
+				<p>Hey guys! Thanks for visiting our website. I'm Sakar Paudel,
+				 a student of computing studying at Islington College. My goal is
+				to work in a fortune 500 company. I like browsing the web for new
+				technologies that come out everyday as it helps me with getting great
+				knowledge and resources. Additionally, i am an automobile enthusiast.</p>
+			</div>
+			<div class="img">
+					<img src="../img/sakar.jpg">
+			</div>
+		</div>
+		<div class="details">
+			<div class="img">
+					<img src="../img/default.png">
+			</div>
+			<div class="desc">
+				<h2>Shreeyush Dhungana</h2>
+				<div class="sociallogo">
+					<a href="https://www.facebook.com/srijan.mahrzn"><img src="../img/fb.png"></a>
+					<a href="https://www.instagram.com/srijanmahrzn"><img src="../img/insta.png"></a>
+					<a href="https://www.github.com"><img src="../img/github.png"></a>
+				</div>
+				<p>Hey everyone! Thanks for visiting our website. I'm Shreeyush Dhungana,
+				currently a student studying Computing at Islington College. I would like
+				to become a Software Engineer after I graduate. I love travelling and I 
+				also love researching online as it helps me with getting great knowledge
+				and resources. I love playing games</p>
+			</div>
+		</div>
+		<div class="details">
+			<div class="desc">
+				<h2>Bikalpa Kunwar</h2>
+				<div class="sociallogo">
+					<a href="https://www.facebook.com/bikalpa.kunwar.5"><img src="../img/fb.png"></a>
+					<a href="https://www.instagram.com/bikalpaa_/"><img src="../img/insta.png"></a>
+					<a href="https://github.com/Bikalpa07"><img src="../img/github.png"></a>
+				</div>
+				<p>Hey everyone! Thanks for visiting our website. I’m Bikalpa Kunwar, currently a student 
+				studying Computing at Islington College. I would like to become a Business Tycoon after I
+				graduate. I love to travel, explore and experience new things.</p>
+			</div>
+			<div class="img">
+					<img src="../img/default.png">
+			</div>
+		</div>
+	</div>
+	<div class="form">
+		<form name="feedbackform">
+			<p><label for="email">Email</label></p>
+			<input type="email" name="email">
+			<p><label for="textarea">Feedback</p>
+			<textarea style="width:400px; height: 100px;" name="feedback"></textarea>
+			<br>
+			<button class="button" onclick="return feed()">Submit</button>
+		</form>
+	</div>
+	<!----footer---->
+	<div class="footer">
+		<div class="footer-col">
+			<h4>Follow us on</h4>
+				<ul>
+					<!----Adding social media links in footer---->
+					<a href="https://www.facebook.com">
+						<li>Facebook</li>
+					</a>
+					<a href="https://www.instagram.com">
+						<li>Instagram</li>
+					</a>
+					<a href="https://www.twitter.com">
+						<li>Twitter</li>
+					</a>
+				</ul>						
+		</div>
+		<p class="copyright">&copyCopy right 2022 - Team 4</p>
+	</div>
+	<!-----script for form validation---->
+	<script type="text/javascript">
+		function feed(){
+			var email = document.feedbackform.email.value;
+			var feedback = document.feedbackform.feedback.value;
+			if(email == ""){
+				alert("Enter an email");
+				return false;
+			}
+			else if(email.length<10){
+				alert("invalid email");
+				return false;
+			}
+			else if(feedback == ""){
+				alert("Enter a message");
+				return false;
+			}
+			alert("Thankyou for your feedback");
+		}
+	</script>
+</body>
+</html>

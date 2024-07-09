@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Account</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<!-----css specific to this page--->
+	<style type="text/css">
+		.form{
+			text-align: left;
+			padding: 10px;
+			margin-left: 40%;
+
+		}
+		.form button{
+			border-radius: 15px;
+			
+		}
+		button a{
+			color: black;
+		}
+		.form input{
+			padding:5px 10px;
+			border-radius: 15px;
+			margin:10px 0;
+		}
+	</style>
+</head>
+<body>
+	<!-------nav bar------->
+	<div class="navbar">
+		<img src="../img/logo.png" width="170px">
+		<h1 class="logoname-top" >B</h1>
+		<div class="logoname-bottom">
+			<span>uy</span>
+			<span>onsai</span>
+		</div>
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../html/products.html">Products</a></li>
+					<li><a href="../html/research.html">Research</a></li>
+					<li><a href="../html/blog.html">Blog</a></li>
+					<li class="current"><a href="../html/account.html">Account</a></li>
+					<li><a href="../html/aboutus.html">About Us</a></li>
+				</ul>
+			</nav>
+	</div>
+	<!-----form--->
+	<div class="form">
+		<form name="signupform">
+			<h1>Sign up</h1>
+			<div>
+				<p><label for="userName">User Name</label></p>
+				<input type="text" placeholder="Username" name="username">
+			</div>
+			<div>
+				<p><label for="email">Email</label></p>
+				<input type="email" placeholder="email" name="email">
+			</div>
+			<div>
+				<p><label for="address">Address</p>
+					<input type="text" placeholder="Address" name="address">
+			</div>
+			<div>
+				<p><label for="Password">Password</label></p>
+				<input type="password" placeholder="password" name="password1">
+			</div>
+			<div>
+				<p><label for="Password">Confirm Password</label></p>
+				<input type="password" placeholder="password"name="password2">
+			</div>
+			<p>Have an account?<a href="../html/account.html">Sign in</a></p>
+			<button class="button" onclick="return signup()"><a href="../html/account.html">Sign up</a></button>
+		</form>
+	</div>
+
+
+	<!----footer---->
+	<div class="footer">
+		<div class="footer-col">
+			<h4>Follow us on</h4>
+				<ul>
+					<!----Adding social media links in footer---->
+					<a href="https://www.facebook.com">
+						<li>Facebook</li>
+					</a>
+					<a href="https://www.instagram.com">
+						<li>Instagram</li>
+					</a>
+					<a href="https://www.twitter.com">
+						<li>Twitter</li>
+					</a>
+				</ul>						
+		</div>
+		<p class="copyright">&copyCopy right 2022 - Team 4</p>
+	</div>
+	<!-----script for form validation---->
+	<script type="text/javascript">
+		function signup(){
+			var username = document.signupform.username.value;
+			var email = document.signupform.email.value;
+			var address = document.signupform.address.value;
+			var password1 = document.signupform.password1.value;
+			var password2 = document.signupform.password2.value;
+			if(username == ""){
+				alert("enter a username");
+				return false;
+			}
+			else if(email == ""){
+				alert("enter the email");
+				return false;
+			}
+			else if(email == ""){
+				alert("enter the email");
+				return false;
+			}
+			else if(address == ""){
+				alert("enter the address");
+				return false;
+			}
+			else if(password1 == ""){
+				alert("enter the password");
+				return false;
+			}
+			else if(password1.length<6){
+				alert("password must be 6 character long");
+				return false;
+			}
+			else if(password1 != password2){
+				alert("Password donot match");
+				return false;
+			}
+			alert("you have successfully created your account,Now please login");	
+		}
+	</script>
+</body>
+</html>
